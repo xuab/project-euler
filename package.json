@@ -1,0 +1,17 @@
+{
+  "name": "project-euler",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "author": "Stéphane Clairbaux <stephane@clairbaux.com>",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "bs-platform": "^8.3.3",
+    "chalk": "^4.1.0",
+    "onchange": "^7.1.0",
+    "prettier": "^2.2.1",
+    "pretty-ms": "^7.0.1"
+  }
+}

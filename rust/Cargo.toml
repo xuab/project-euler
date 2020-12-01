@@ -1,0 +1,20 @@
+[package]
+name = "project-euler-rust"
+version = "0.1.0"
+authors = ["Stéphane Clairbaux <stephane@clairbaux.com>"]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/index.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.63"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
