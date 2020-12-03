@@ -1,2 +1,2 @@
 exports.range = (start, end) =>
-  Array.from({ length: 1 + end - start }, (_, i) => 1 + i + start)
+  Array.from({ length: end - start + 1 }, (_, i) => i + start)

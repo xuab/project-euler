@@ -3,12 +3,10 @@
 // What is the smallest positive number that is evenly divisible by all of the
 // numbers from 1 to 20?
 
-const { range } = require('./utils')
+let notDivisible = (n) => Belt.Range.some(11, 20, (d) => mod(n, d) > 0)
 
-const dividers = range(11, 20)
-
-exports.p005 = () => {
-  let n = 2520
-  while (dividers.some((d) => n % d > 0)) n += 2520
-  return n
+let rec loop = (n) => {
+  notDivisible(n) ? loop(n + 2520) : n
 }
+
+let p005 = () => loop(2520)
