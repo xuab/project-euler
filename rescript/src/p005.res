@@ -5,8 +5,6 @@
 
 let notDivisible = (n) => Belt.Range.some(11, 20, (d) => mod(n, d) > 0)
 
-let rec loop = (n) => {
-  notDivisible(n) ? loop(n + 2520) : n
-}
+let rec loop = (n) => notDivisible(n) ? loop(n + 2520) : n
 
 let p005 = () => loop(2520)
