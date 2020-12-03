@@ -3,10 +3,12 @@
 // What is the smallest positive number that is evenly divisible by all of the
 // numbers from 1 to 20?
 
-const dividers = Array.from({ length: 20 }, (_, i) => i + 1)
+const { range } = require('./utils')
+
+const dividers = range(10, 20)
 
 exports.p005 = () => {
-  let a = 2520
-  while (dividers.some((d) => a % d > 0)) a += 2520
-  return a
+  let n = 2520
+  while (dividers.some((d) => n % d > 0)) n += 2520
+  return n
 }
