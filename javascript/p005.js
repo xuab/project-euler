@@ -5,10 +5,10 @@
 
 const { range } = require('./utils')
 
-const dividers = range(11, 20)
+const divisors = range(11, 21)
 
 exports.p005 = () => {
   let n = 2520
-  while (dividers.some((d) => n % d > 0)) n += 2520
+  while (divisors.some((d) => n % d > 0)) n += 2520
   return n
 }

@@ -9,7 +9,7 @@
 
 const { range } = require('./utils')
 
-const numbers = range(1, 100)
+const numbers = range(1, 101)
 const square = (n) => n * n
 
 exports.p006 = () =>

@@ -5,11 +5,10 @@
 const last = (l) => l[l.length - 1]
 
 exports.p007 = () => {
-  let primes = [2, 3, 5, 7, 11, 13]
+  let primes = [3, 5, 7, 11, 13]
   let n = 15
-  while (primes.length < 10_001) {
-    const dividers = primes.filter((p) => p <= Math.sqrt(n))
-    const isPrime = !dividers.some((d) => n % d === 0)
+  while (primes.length < 10_000) {
+    const isPrime = !primes.some((p) => Number.isInteger(n / p))
     if (isPrime) primes.push(n)
     n += 2
   }
